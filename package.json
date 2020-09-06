@@ -9,6 +9,9 @@
     "setup:db": "npm run db:migrate && npm run db:seed",
     "db:migrate": "./node_modules/.bin/sequelize db:migrate",
     "db:seed": "./node_modules/.bin/sequelize db:seed:all",
+    "db:undo": "./node_modules/.bin/sequelize db:migrate:undo",
+    "db:seed:undo": "./node_modules/.bin/sequelize db:seed:undo",
+    "db:migrate:undo": "./node_modules/.bin/sequelize db:migrate:undo",
     "start": "nodemon src/index.js --exec babel-node",
     "start:prod": "npm run build:prod && npm run start:server",
     "build:prod": "babel src -s -D -d build",
@@ -45,11 +48,11 @@
     "express": "4.17.1",
     "express-graphql": "0.9.0",
     "graphql": "14.6.0",
+    "jsonwebtoken": "8.5.1",
     "morgan": "1.10.0",
     "multer": "1.4.2",
     "mysql2": "2.1.0",
     "pg": "^8.2.1",
-    "sequelize": "5.21.6",
-    "sequelize-cli": "5.5.1"
+    "sequelize": "5.21.6"
   }
 }
