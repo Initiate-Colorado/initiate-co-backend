@@ -6,7 +6,9 @@ import databaseConnection from './database'
 
 const models = {
   User: databaseConnection.import('../modules/user/model'),
-  Subscriber: databaseConnection.import('../modules/subscriber/model')
+  Subscriber: databaseConnection.import('../modules/subscriber/model'),
+  BallotProcess: databaseConnection.import('../modules/ballot_process/model'),
+  Ballot: databaseConnection.import('../modules/ballots/model')
 }
 
 Object.keys(models).forEach(modelName => {

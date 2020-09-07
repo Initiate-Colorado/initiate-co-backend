@@ -4,6 +4,8 @@ import { GraphQLObjectType } from 'graphql'
 // App Imports
 import * as user from '../../modules/user/mutations'
 import * as subscribers from '../../modules/subscriber/mutations'
+import * as ballot_process from '../../modules/ballot_process/mutations'
+import * as ballots from '../../modules/ballots/mutations'
 // Mutation
 const mutation = new GraphQLObjectType({
   name: 'mutations',
@@ -11,7 +13,9 @@ const mutation = new GraphQLObjectType({
 
   fields: {
     ...user,
-    ...subscribers
+    ...subscribers,
+    ...ballot_process,
+    ...ballots
   }
 })
 
