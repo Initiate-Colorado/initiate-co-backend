@@ -36,9 +36,9 @@ module.exports = {
         allowNull: true,
         type: Sequelize.TEXT
       },
-      meetUpAddress: {
+      step: {
         allowNull: true,
-        type: Sequelize.STRING
+        type: Sequelize.INTEGER
       }
     });
   },

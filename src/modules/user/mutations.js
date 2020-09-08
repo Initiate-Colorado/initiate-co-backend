@@ -53,10 +53,10 @@ export const updateUser = {
       name: 'email',
       type: GraphQLString
     },
-    // password: {
-    //   name: 'password',
-    //   type: GraphQLString
-    // },
+    password: {
+      name: 'password',
+      type: GraphQLString
+    },
     thirty_days_from: {
       name: 'thirty_days_from',
       type: GraphQLString
@@ -68,6 +68,10 @@ export const updateUser = {
     ballotDescription: {
       name: 'ballotDescription',
       type: GraphQLString
+    },
+    step: {
+      name: 'step',
+      type: GraphQLInt
     }
   },
   resolve: updateUserResolver

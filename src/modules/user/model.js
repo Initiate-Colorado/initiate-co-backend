@@ -27,10 +27,12 @@ module.exports = function(sequelize, DataTypes) {
     ballotDescription: {
       type: DataTypes.TEXT
     },
-    meetUpAddress: {
-      type: DataTypes.STRING
+    step: {
+      type: DataTypes.INTEGER
     }
   })
-
+  User.associate = function(models) {
+    User.hasMany(models.Ballot)
+  }
   return User
 }

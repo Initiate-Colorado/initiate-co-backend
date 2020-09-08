@@ -49,7 +49,6 @@ export async function login(parentValue, { email, password }) {
         thirty_days_from: userDetails.thirty_days_from,
         ballotTitle: userDetails.ballotTitle,
         ballotDescription: userDetails.ballotDescription,
-        meetUpAddress: userDetails.meetUpAddress
       }
 
       return {
@@ -60,7 +59,7 @@ export async function login(parentValue, { email, password }) {
   }
 }
 // Update User
-export async function updateUserResolver(parentValue, { id, email, thirty_days_from, ballotTitle, ballotDescription }, { auth }) {
+export async function updateUserResolver(parentValue, { id, email, thirty_days_from, ballotTitle, ballotDescription, step, password }, { auth }) {
   if(auth.user && auth.user.id > 0) {
     await models.User.update(
       {
@@ -68,7 +67,9 @@ export async function updateUserResolver(parentValue, { id, email, thirty_days_f
         email,
         thirty_days_from,
         ballotTitle,
-        ballotDescription
+        ballotDescription,
+        step,
+        password
       },
       { where: { id } }
     )

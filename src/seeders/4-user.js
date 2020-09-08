@@ -15,7 +15,6 @@ module.exports = {
         ballotDescription: "really cool stuff",
         createdAt: new Date(),
         updatedAt: new Date(),
-        meetUpAddress: "123 3rd street"
       },
       {
         name: 'The User',
@@ -26,7 +25,6 @@ module.exports = {
         ballotDescription: "really cool stuff",
         createdAt: new Date(),
         updatedAt: new Date(),
-        meetUpAddress: "123 3rd street"
       }
     ])
   },

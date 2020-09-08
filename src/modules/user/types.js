@@ -14,8 +14,7 @@ const UserType = new GraphQLObjectType({
     updatedAt: { type: GraphQLString },
     thirty_days_from: { type: GraphQLString },
     ballotTitle: { type: GraphQLString },
-    ballotDescription: { type: GraphQLString },
-    meetUpAddress: { type: GraphQLString }
+    ballotDescription: { type: GraphQLString }
   })
 })
 // User Login type

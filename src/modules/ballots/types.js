@@ -1,6 +1,6 @@
 // Imports
 import { GraphQLObjectType, GraphQLString, GraphQLInt , GraphQLList } from 'graphql'
-
+import { UserType } from  '../user/types'
 // User type
 const BallotType = new GraphQLObjectType({
   name: 'ballotType',
@@ -12,6 +12,11 @@ const BallotType = new GraphQLObjectType({
     description: { type: GraphQLString },
     createdAt: { type: GraphQLString },
     updatedAt: { type: GraphQLString },
+    userId: { type: GraphQLInt },
+    user: { type: UserType},
+    corepresentative: { type: GraphQLString },
+    ballotNumber: { type: GraphQLInt },
+    meetUpAddress: { type: GraphQLString }
   })
 })
 

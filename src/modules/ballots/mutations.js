@@ -25,6 +25,18 @@ export const ballotCreate = {
     subject: {
       name: 'subject',
       type: GraphQLString
+    },
+    userId: {
+      name: 'userId',
+      type: GraphQLInt
+    },
+    corepresentative: {
+      name: 'corepresentative',
+      type: GraphQLString
+    },
+    ballotNumber: {
+      name: 'ballotNumber',
+      type: GraphQLString
     }
   },
   resolve: create
@@ -48,6 +60,18 @@ export const ballotUpdate = {
     },
     subject: {
       name: 'subject',
+      type: GraphQLString
+    },
+    corepresentative: {
+      name: 'corepresentative',
+      type: GraphQLString
+    },
+    ballotNumber: {
+      name: 'ballotNumber',
+      type: GraphQLString
+    },
+    meetUpAddress: {
+      name: 'meetUpAddress',
       type: GraphQLString
     }
   },

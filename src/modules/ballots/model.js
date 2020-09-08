@@ -18,7 +18,22 @@ module.exports = function(sequelize, DataTypes) {
     updatedAt: {
       type: DataTypes.DATE
     },
+    userId: {
+      type: DataTypes.INTEGER
+    },
+    corepresentative: {
+      type: DataTypes.STRING
+    },
+    ballotNumber: {
+      type: DataTypes.INTEGER
+    },
+    meetUpAddress: {
+      type: DataTypes.STRING
+    }
   })
+  Ballot.associate = function(models) {
+    Ballot.belongsTo(models.User, { foreignKey: 'userId'} )
+  }
 
   return Ballot
 }

@@ -17,7 +17,8 @@ module.exports = {
         description: "this awesome ballot",
         subject: "Everything",
         createdAt: new Date(),
-        updatedAt: new Date()
+        updatedAt: new Date(),
+        userId: 1
       }
     ])
   },

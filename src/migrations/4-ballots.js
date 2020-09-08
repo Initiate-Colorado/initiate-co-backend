@@ -26,6 +26,26 @@ module.exports = {
       updatedAt: {
         allowNull: false,
         type: Sequelize.DATE
+      },
+      userId: {
+        type: Sequelize.INTEGER,
+        references: {
+          model: 'users',
+          key: 'id'
+        },
+        allowNull: true
+      },
+      corepresentative: {
+        type: Sequelize.STRING,
+        allowNull: true
+      },
+      ballotNumber: {
+        type: Sequelize.INTEGER,
+        allowNull: true
+      },
+      meetUpAddress: {
+        allowNull: true,
+        type: Sequelize.STRING
       }
     });
   },
