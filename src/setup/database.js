@@ -1,30 +1,18 @@
-// Imports
-import { Sequelize } from 'sequelize'
+const { Client } = require('pg');
 
-// App Imports
-import { NODE_ENV } from '../config/env'
-import databaseConfig from '../config/database.json'
+const client = new Client({
+  connectionString: process.env.DATABASE_URL,
+  ssl: {
+    rejectUnauthorized: false
+  }
+});
 
-// Load database config
-const databaseConfigEnv = databaseConfig[NODE_ENV]
+client.connect();
 
-// Create new database connection
-const connection = new Sequelize(databaseConfigEnv.database, databaseConfigEnv.username, databaseConfigEnv.password, {
-  host: databaseConfigEnv.host,
-  dialect: databaseConfigEnv.dialect,
-  logging: false
-})
-
-// Test connection
-// console.info('SETUP - Connecting database...')
-//
-connection
-  .authenticate()
-//   .then(() => {
-//     console.info('INFO - Database connected.')
-//   })
-//   .catch(err => {
-//     console.error('ERROR - Unable to connect to the database:', err)
-//   })
-
-export default connection
+client.query('SELECT table_schema,table_name FROM information_schema.tables;', (err, res) => {
+  if (err) throw err;
+  for (let row of res.rows) {
+    console.log(JSON.stringify(row));
+  }
+  client.end();
+});
