@@ -16,7 +16,6 @@
     "db:undo": "./node_modules/.bin/sequelize db:migrate:undo",
     "db:seed:undo": "./node_modules/.bin/sequelize db:seed:undo",
     "db:migrate:undo": "./node_modules/.bin/sequelize db:migrate:undo",
-    "start": "nodemon src/index.js --exec babel-node",
     "start:prod": "npm run build:prod && npm run start:server",
     "build:prod": "babel src -s -D -d build",
     "start:server": "node build/index.js",
