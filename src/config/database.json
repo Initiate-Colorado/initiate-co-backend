@@ -1,6 +1,6 @@
 {
   "development": {
-    "username": "dannyramos",
+    "username": "rostammahabadi",
     "password": null,
     "database": "initiateco",
     "host": "127.0.0.1",
@@ -10,8 +10,8 @@
   "production": {
     "username": "rostammahabadi",
     "password": null,
-    "database": "HEROKU_POSTGRESQL_BROWN_URL",
-    "host": "initiate-co-backend.herokuapp.com",
+    "database": "dsbqlidoheg9v",
+    "host": "ec2-54-172-173-58.compute-1.amazonaws.com",
     "dialect": "postgres",
     "seederStorage": "sequelize",
     "use_env_variable": "DATABASE_URL"
