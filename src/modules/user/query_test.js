@@ -26,3 +26,13 @@ describe('user_queries', () => {
 
     expect(response.body.data.users.length).toEqual(2)
   })
+
+
+  it('returns  can return a user', async () => {
+    const response = await request(server)
+    .get('/')
+    .send({query: '{ user(id: 2) { email name}}'})
+    .expect(200)
+
+
+  })
