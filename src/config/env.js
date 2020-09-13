@@ -2,7 +2,7 @@
 import dotenv from 'dotenv'
 import path from 'path'
 // Load .env
-dotenv.config({path: path.resolve(`/../..`, '.env')})
+dotenv.config()
 // Environment
 export const NODE_ENV = process.env.NODE_ENV
 
