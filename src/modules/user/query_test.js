@@ -34,5 +34,6 @@ describe('user_queries', () => {
     .send({query: '{ user(id: 2) { email name}}'})
     .expect(200)
 
-
+    expect(response.body.data.user.email).toEqual("user@email.com")
+    expect(response.body.data.user.name).toEqual("The User")
   })
