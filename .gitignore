@@ -1,0 +1,6 @@
+node_modules/
+build/
+public/images/uploads/*
+!public/images/uploads/.gitkeep
+
+# src/config/database.json
