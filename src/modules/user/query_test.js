@@ -37,3 +37,8 @@ describe('user_queries', () => {
     expect(response.body.data.user.email).toEqual("user@email.com")
     expect(response.body.data.user.name).toEqual("The User")
   })
+
+  it('is_true', () => {
+   expect(true).toBe(true)
+ })
+})
