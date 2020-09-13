@@ -17,3 +17,12 @@ describe('user_queries', () => {
       })
     )
   })
+
+  it('returns all users', async () => {
+    const response = await request(server)
+    .get('/')
+    .send({ query: '{ users { email name description} }'})
+    .expect(200)
+
+    expect(response.body.data.users.length).toEqual(2)
+  })
