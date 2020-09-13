@@ -16,5 +16,3 @@ export const ENV = {
   USERNAME: process.env.USER,
   PASSWORD: process.env.PASSWORD
 }
-
-// wrap up node_ENV and PORT for later
