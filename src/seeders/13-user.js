@@ -7,22 +7,24 @@ module.exports = {
   up: (queryInterface, Sequelize) => {
     return queryInterface.bulkInsert('users', [
       {
-        name: 'The Admin',
-        email: 'admin@crate.com',
+        id: 1,
+        name: 'User1',
+        email: 'user1@initiateco.com',
         password: bcrypt.hashSync('123456', config.saltRounds),
         thirty_days_from: new Date(),
-        ballotTitle: "asdf",
-        ballotDescription: "really cool stuff",
+        ballotTitle: "Frog free america",
+        ballotDescription: "The banning of frogs initiative",
         createdAt: new Date(),
         updatedAt: new Date(),
       },
       {
-        name: 'The User',
-        email: 'user@crate.com',
+        id: 2,
+        name: 'User2',
+        email: 'user2@initiateco.com',
         password: bcrypt.hashSync('123456', config.saltRounds),
         thirty_days_from: new Date(),
-        ballotTitle: "asdf",
-        ballotDescription: "really cool stuff",
+        ballotTitle: "Putins american surveliance mission",
+        ballotDescription: "Replace all cameras in birds",
         createdAt: new Date(),
         updatedAt: new Date(),
       }
