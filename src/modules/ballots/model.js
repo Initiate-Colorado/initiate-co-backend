@@ -3,7 +3,7 @@
 // User
 module.exports = function(sequelize, DataTypes) {
   let Ballot = sequelize.define('ballots', {
-    type: {
+    title: {
       type: DataTypes.STRING
     },
     subject: {

@@ -7,9 +7,9 @@ const Sequelize = require('sequelize');
 const Op = Sequelize.Op;
 
 // Create
-export async function create(parentValue, { type, description, subject, userId, corepresentative, ballotNumber }) {
+export async function create(parentValue, { title, description, subject, userId, corepresentative, ballotNumber }) {
   return await models.Ballot.create({
-    type,
+    title,
     description,
     subject,
     userId,
@@ -21,9 +21,9 @@ export async function create(parentValue, { type, description, subject, userId, 
   })
 }
 // Update
-export async function update(parentValue, { id ,type, description, subject, corepresentative, ballotNumber, meetUpAddress}) {
+export async function update(parentValue, { id ,title, description, subject, corepresentative, ballotNumber, meetUpAddress}) {
   return await models.Ballot.update({
-    type,
+    title,
     description,
     subject,
     representative,

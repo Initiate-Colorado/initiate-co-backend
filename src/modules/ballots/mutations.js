@@ -14,7 +14,7 @@ export const ballotCreate = {
       name: 'id',
       type: GraphQLInt
     },
-    type: {
+    title: {
       name: 'title',
       type: GraphQLString
     },
@@ -62,7 +62,7 @@ export const ballotUpdate = {
       name: 'id',
       type: GraphQLInt
     },
-    type: {
+    title: {
       name: 'title',
       type: GraphQLString
     },
