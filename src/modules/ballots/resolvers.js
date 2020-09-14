@@ -13,7 +13,10 @@ export async function create(parentValue, { type, description, subject, userId, 
     description,
     subject,
     userId,
+    representative,
+    representativeAddress,
     corepresentative,
+    corepresentativeAddress,
     ballotNumber
   })
 }
@@ -23,7 +26,10 @@ export async function update(parentValue, { id ,type, description, subject, core
     type,
     description,
     subject,
+    representative,
+    representativeAddress,
     corepresentative,
+    corepresentativeAddress,
     ballotNumber,
     meetUpAddress
   }, {where: { id } } )

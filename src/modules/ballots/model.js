@@ -21,7 +21,16 @@ module.exports = function(sequelize, DataTypes) {
     userId: {
       type: DataTypes.INTEGER
     },
+    representative: {
+      type: DataTypes.STRING
+    },
+    representativeAddress: {
+      type: DataTypes.STRING
+    },
     corepresentative: {
+      type: DataTypes.STRING
+    },
+    corepresentativeAddress: {
       type: DataTypes.STRING
     },
     ballotNumber: {

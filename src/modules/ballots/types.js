@@ -14,6 +14,10 @@ const BallotType = new GraphQLObjectType({
     updatedAt: { type: GraphQLString },
     userId: { type: GraphQLInt },
     user: { type: UserType},
+    representative: {type: GraphQLString} ,
+    representativeAddress: {type: GraphQLString} ,
+    corepresentative: {type: GraphQLString} ,
+    corepresentativeAddress: {type: GraphQLString} ,
     corepresentative: { type: GraphQLString },
     ballotNumber: { type: GraphQLInt },
     meetUpAddress: { type: GraphQLString }
