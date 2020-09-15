@@ -34,8 +34,8 @@ describe('ballot query', () => {
       }}`
     })
     .expect(200)
-    console.log(response.body)
-    expect(response.body.data.ballot.length).toEqual(1)
+    // console.log(response.body.data.ballot)
+    expect(response.body.data.ballot.type).toBe('The Admin')
   })
 
   it("returns all Ballots", async () => {
@@ -50,7 +50,7 @@ describe('ballot query', () => {
       }}`
     })
     .expect(200)
-    console.log(response.body)
-    // expect(response.body.data.ballot.length).toEqual(1)
+    // console.log(response.body)
+    expect(response.body.data.ballots[0].type).toBe('The Admin')
   })
 })
