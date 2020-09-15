@@ -14,7 +14,7 @@ export const ballotCreate = {
       name: 'id',
       type: GraphQLInt
     },
-    type: {
+    title: {
       name: 'title',
       type: GraphQLString
     },
@@ -30,8 +30,20 @@ export const ballotCreate = {
       name: 'userId',
       type: GraphQLInt
     },
+    representative: {
+      name: 'representative',
+      type: GraphQLString
+    },
+    representativeAddress: {
+      name: 'representativeAddress',
+      type: GraphQLString
+    },
     corepresentative: {
       name: 'corepresentative',
+      type: GraphQLString
+    },
+    corepresentativeAddress: {
+      name: 'representativeAddress',
       type: GraphQLString
     },
     ballotNumber: {
@@ -50,7 +62,7 @@ export const ballotUpdate = {
       name: 'id',
       type: GraphQLInt
     },
-    type: {
+    title: {
       name: 'title',
       type: GraphQLString
     },
@@ -62,8 +74,20 @@ export const ballotUpdate = {
       name: 'subject',
       type: GraphQLString
     },
+    representative: {
+      name: 'representative',
+      type: GraphQLString
+    },
+    representativeAddress: {
+      name: 'representativeAddress',
+      type: GraphQLString
+    },
     corepresentative: {
       name: 'corepresentative',
+      type: GraphQLString
+    },
+    corepresentativeAddress: {
+      name: 'representativeAddress',
       type: GraphQLString
     },
     ballotNumber: {

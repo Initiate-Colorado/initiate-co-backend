@@ -7,13 +7,17 @@ const BallotType = new GraphQLObjectType({
   description: 'Ballot type',
   fields: () => ({
     id: { type: GraphQLInt },
-    type: { type: GraphQLString },
+    title: { type: GraphQLString },
     subject: { type: GraphQLString },
     description: { type: GraphQLString },
     createdAt: { type: GraphQLString },
     updatedAt: { type: GraphQLString },
     userId: { type: GraphQLInt },
     user: { type: UserType},
+    representative: {type: GraphQLString} ,
+    representativeAddress: {type: GraphQLString} ,
+    corepresentative: {type: GraphQLString} ,
+    corepresentativeAddress: {type: GraphQLString} ,
     corepresentative: { type: GraphQLString },
     ballotNumber: { type: GraphQLInt },
     meetUpAddress: { type: GraphQLString }

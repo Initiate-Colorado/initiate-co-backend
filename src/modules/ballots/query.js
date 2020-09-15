@@ -3,7 +3,7 @@ import { GraphQLInt, GraphQLString, GraphQLList } from 'graphql'
 
 //App Imports
 import { BallotType } from './types'
-import { getById, getAll} from './resolvers'
+import { getById, getAll, getAllProposedBallots} from './resolvers'
 
 // By ID
 export const ballot = {
@@ -19,4 +19,10 @@ export const ballot = {
 export const ballots = {
   type: new GraphQLList(BallotType),
   resolve: getAll
+}
+
+// get all proposed ballots
+export const proposedBallots = {
+  type: new GraphQLList(BallotType),
+  resolve: getAllProposedBallots
 }
