@@ -23,9 +23,7 @@
     "test": "jest"
   },
   "jest": {
-    "setupFilesAfterEnv": [
-      "jest-extended"
-    ]
+    "verbose": true
   },
   "keywords": [],
   "author": "",
