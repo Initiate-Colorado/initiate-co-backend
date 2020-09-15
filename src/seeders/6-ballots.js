@@ -6,14 +6,14 @@ module.exports = {
   up: (queryInterface, Sequelize) => {
     return queryInterface.bulkInsert('ballots', [
       {
-        type: 'The Admin',
+        title: 'The Admin',
         description: "give me 100k a year",
         subject: "This",
         createdAt: new Date(),
         updatedAt: new Date()
       },
       {
-        type: 'The User',
+        title: 'The User',
         description: "this awesome ballot",
         subject: "Everything",
         createdAt: new Date(),
