@@ -48,10 +48,6 @@ describe('ballot query', () => {
   afterAll(() => {
     db.close()
   })
-  
-  it("is true", () => {
-    expect(true).toBe(true)
-  })
 
   it("returns Ballot by id", async () => {
     const response = await request(server)
