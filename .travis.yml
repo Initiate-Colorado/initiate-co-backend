@@ -3,4 +3,10 @@ node_js:
   - v12.18.3 
 notifications: 
   email: false
+services:
+  - postgresql
+before_script:
+  - npm install
+  - psql -c 'create database initiateco;' -U postgres
+script:
   
