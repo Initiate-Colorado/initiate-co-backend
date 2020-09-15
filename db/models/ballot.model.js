@@ -8,7 +8,7 @@ const Ballot = db.define('ballot', {
     primaryKey: true,
     type: Sequelize.INTEGER
   },
-  type: {
+  title: {
     allowNull: false,
     type: Sequelize.STRING
   },
