@@ -2,6 +2,8 @@ import request from 'supertest'
 import express from 'express'
 import schema from '../../setup/schema'
 import graphqlHTTP from 'express-graphql'
+import db from '../../setup/database';
+import models from '../../setup/models'
 
 describe('ballot query', () => {
   let server;
@@ -13,11 +15,40 @@ describe('ballot query', () => {
       "/",
       graphqlHTTP({
         schema: schema,
-        graphiql: true
+        graphiql: false
       })
     )
   })
 
+  beforeEach(async () => {
+    const ballot1 = {
+      id: 1,
+      title: 'The Admin',
+      description: "give me 100k a year",
+      subject: "This",
+      createdAt: new Date(),
+      updatedAt: new Date()
+    };
+    const ballot2 = {
+      id: 2,
+      title: 'The User',
+      description: "this awesome ballot",
+      subject: "Everything",
+      createdAt: new Date(),
+      updatedAt: new Date(),
+    };
+    await models.Ballot.create(ballot1);
+    await models.Ballot.create(ballot2);
+  })
+  
+  afterEach(async () => {
+    await models.Ballot.destroy({ where: {} })
+  })
+
+  afterAll(() => {
+    db.close()
+  })
+  
   it("is true", () => {
     expect(true).toBe(true)
   })
@@ -28,14 +59,14 @@ describe('ballot query', () => {
     .send({
       query: `{ballot(id: 1){
         id
-        type
+        title
         subject
         description
       }}`
     })
     .expect(200)
     // console.log(response.body.data.ballot)
-    expect(response.body.data.ballot.type).toBe('The Admin')
+    expect(response.body["data"]["ballot"]["title"]).toBe('The Admin')
   })
 
   it("returns all Ballots", async () => {
@@ -44,13 +75,13 @@ describe('ballot query', () => {
     .send({
       query: `{ballots{
         id
-        type
+        title
         subject
         description
       }}`
     })
     .expect(200)
     // console.log(response.body)
-    expect(response.body.data.ballots[0].type).toBe('The Admin')
+    expect(response.body["data"]["ballots"].length).toEqual(2)
   })
 })
