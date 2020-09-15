@@ -25,6 +25,14 @@ describe("User queries", () => {
     expect(response.body.data.user).toEqual({ name: "User1" })
   });
 
+  it('User login', async () => {
+    const response = await request(server)
+    .get('/')
+    .send({ query: 'query { userLogin(email: \"user1@initiateco.com\", password: \"123456\") { token, user {id, email } } } ' })
+    .expect(200)
+    expect(response.body.data.userLogin.token).toEqual(expect.anything())
+    expect(response.body.data.userLogin.user.email).toEqual(  "user1@initiateco.com" )
+  });
   afterAll(() => {
   server.close();
 });
