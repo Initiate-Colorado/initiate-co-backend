@@ -20,7 +20,7 @@ describe("User queries", () => {
   it('Gets user by ID', async () => {
     const response = await request(server)
     .get('/')
-    .send({ query: 'query { user(id: 5) { name } }' })
+    .send({ query: 'query { user(id: 1) { name } }' })
     .expect(200)
     expect(response.body.data.user).toEqual({ name: "User1" })
   });
