@@ -3,25 +3,33 @@
 //App Imports
 import serverConfig from '../../config/server'
 import models from '../../setup/models'
+const Sequelize = require('sequelize');
+const Op = Sequelize.Op;
 
 // Create
-export async function create(parentValue, { type, description, subject, userId, corepresentative, ballotNumber }) {
+export async function create(parentValue, { title, description, subject, userId, corepresentative, ballotNumber }) {
   return await models.Ballot.create({
-    type,
+    title,
     description,
     subject,
     userId,
+    representative,
+    representativeAddress,
     corepresentative,
+    corepresentativeAddress,
     ballotNumber
   })
 }
 // Update
-export async function update(parentValue, { id ,type, description, subject, corepresentative, ballotNumber, meetUpAddress}) {
+export async function update(parentValue, { id ,title, description, subject, corepresentative, ballotNumber, meetUpAddress}) {
   return await models.Ballot.update({
-    type,
+    title,
     description,
     subject,
+    representative,
+    representativeAddress,
     corepresentative,
+    corepresentativeAddress,
     ballotNumber,
     meetUpAddress
   }, {where: { id } } )
@@ -48,4 +56,17 @@ export async function getAll(){
     { model: models.User},
   ]
 })
+}
+
+// Get all proposed ballots
+export async function getAllProposedBallots(){
+  return await models.Ballot.findAll({
+    where: {
+      userId: {
+        [Op.ne]: null
+      }
+    },
+    include: [
+    { model: models.User}]
+  })
 }
