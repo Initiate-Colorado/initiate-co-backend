@@ -26,7 +26,18 @@ describe("User queries", () => {
       expect(response.body.data.userSignup.email).toEqual("craig@initiateco.com")
       models.User.destroy({ where: {id: response.body.data.userSignup.id} })
     });
-  afterAll(() => {
-  server.close();
-});
+
+it('userRemove', async () => {
+  models.User.create({id: 5, name: "craig", email: "craig@initiateco.com", password: "1234"})
+    const response = await request(server)
+    .post('/')
+    .send({ query: 'mutation { userRemove( id: 5) {name, email, id}} ' })
+    .expect(200)
+    expect(response.body.data.userRemove.id).toEqual(null)
+    expect(response.body.data.userRemove.email).toEqual(null)
+    expect(response.body.data.userRemove.name).toEqual(null)
+    });
+    afterAll(() => {
+    server.close();
+    });
 })
