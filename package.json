@@ -20,7 +20,7 @@
     "build:prod": "babel src -s -D -d build",
     "start:server": "node build/index.js",
     "db:scrape": "node db/models/create_ballots.js ",
-    "test": "jest"
+    "test": "jest --coverage"
   },
   "jest": {
     "verbose": true
