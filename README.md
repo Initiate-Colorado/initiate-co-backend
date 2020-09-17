@@ -59,7 +59,37 @@ If you would like to view the application "communicate" with our Python API and 
 npm run db:scrape
 ```
 
-![Image of Response](https://drive.google.com/file/d/1mGxMhVKcflo9QpYBIFaWegx82lvPhjq_/view?usp=sharing)
+Sample of response:
+
+```
+ballotData [
+  {
+    ballotNumber: '76',
+    ballotTitle: 'Citizenship Qualification of Electors* '
+  },
+  { ballotNumber: '107', ballotTitle: 'Restoration of Gray Wolves* ' },
+  {
+    ballotNumber: '120',
+    ballotTitle: 'Prohibition on Late-Term Abortions* '
+  },
+  {
+    ballotNumber: '257',
+    ballotTitle: 'Local Voter Approval of Gaming Limits in Black Hawk, Central City, and Cripple Creek* '
+  },
+  {
+    ballotNumber: '283',
+    ballotTitle: 'Paid Family and Medical Leave Insurance Program* '
+  },
+  {
+    ballotNumber: '295',
+    ballotTitle: 'Voter Approval Requirement for Creation of Certain Fee-Based Enterprises* '
+  },
+  {
+    ballotNumber: '306',
+    ballotTitle: 'State Income Tax Rate Reduction* '
+  },
+
+```
 
 
 ## In action!
