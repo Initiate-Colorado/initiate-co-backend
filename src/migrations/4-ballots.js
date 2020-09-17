@@ -7,7 +7,7 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      type: {
+      title: {
         allowNull: false,
         type: Sequelize.STRING
       },
@@ -35,7 +35,19 @@ module.exports = {
         },
         allowNull: true
       },
+      representative: {
+        type: Sequelize.STRING,
+        allowNull: true
+      },
+      representativeAddress: {
+        type: Sequelize.STRING,
+        allowNull: true
+      },
       corepresentative: {
+        type: Sequelize.STRING,
+        allowNull: true
+      },
+      corepresentativeAddress: {
         type: Sequelize.STRING,
         allowNull: true
       },
