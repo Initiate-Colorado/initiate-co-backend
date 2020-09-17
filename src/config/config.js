@@ -2,8 +2,8 @@ const fs = require('fs');
 
 module.exports = {
   development: {
-    username: 'dannyramos',
-    password: null,
+    username: 'user1',
+    password: 'asdf',
     database: 'initiateco',
     host: '127.0.0.1',
     dialect: 'postgresql',

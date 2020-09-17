@@ -4,3 +4,5 @@ public/images/uploads/*
 !public/images/uploads/.gitkeep
 
 .env
+
+coverage/
