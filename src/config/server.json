@@ -1,6 +1,6 @@
 {
   "port": 8000,
-  "secret": "super-secret-key-crate-api",
+  "secret": "super-secret-key-initiateco-api",
   "saltRounds": 10,
   "graphql": {
     "endpoint": "/",
