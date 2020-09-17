@@ -57,7 +57,7 @@ If you would like to view the application "communicate" with our Python API and 
 npm run db:scrape
 ```
 
-![](https://drive.google.com/drive/u/0/my-drive)
+![Image of Response](https://drive.google.com/drive/u/0/my-drive)
 
 
 ## In action!
