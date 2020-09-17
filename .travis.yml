@@ -7,6 +7,6 @@ services:
   - postgresql
 before_script:
   - npm install
+  - npm run setup
   - psql -c 'create database initiateco;' -U postgres
-script:
   
