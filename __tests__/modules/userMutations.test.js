@@ -38,19 +38,7 @@ describe("User mutations", () => {
     expect(response.body.data.userRemove.name).toEqual(null)
   });
 
-    // it('updateUser', async () => {
-    //   const craig = models.User.create({id: 6, name: "craig1", email: "craig1@initiateco.com", password: "1234"})
-    //     const response = await request(server)
-    //     .post('/')
-    //     .send({ query: `mutation { updateUser( id: ${craig.id}, email: 'craig2@initiateco.com', ballotTitle: 'Frogs suck', ballotDescription: 'self explainitory') {email, id, ballotTitle, ballotDescription}}` })
-    //     .expect(200)
-    //     console.log (response.body)
-    //     // expect(response.body.data.updateUser.id).toEqual(5)
-    //     // expect(response.body.data.updateUser.email).toEqual("craig2@initiateco.com")
-    //     // expect(response.body.data.updateUser.ballotTitle).toEqual("Frogs suck")
-    //     // expect(response.body.data.updateUser.ballotDescription).toEqual("self explainitory")
-    //     models.User.destroy({ where: {id: craig.id} })
-    // });
+
     afterAll(() => {
     server.close();
     });
