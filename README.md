@@ -48,6 +48,8 @@ cd initiate-co-backend
 Once inside the code base, in order to run tests, type the following command in the terminal:
 
 ```
+npm install
+npm run setup
 npm test
 ```
 
