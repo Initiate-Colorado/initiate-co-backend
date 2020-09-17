@@ -24,7 +24,7 @@ Initiate Colorado is the final Capstone project for Front End  and Back End Modu
 
 - Python/ Flask Webscraper
 
-- Jest testing library
+- Jest/Supertest testing library
 
 - Github Projects to track stories and progress
 
